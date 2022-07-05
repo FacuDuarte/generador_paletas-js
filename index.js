@@ -47,14 +47,10 @@ const colorize = (element, index) => {
     }
     element.style.backgroundColor = color
     element.innerHTML = 
-    `<button className="buttonLockColor" onClick="lockColor(${index})">Bloquear color</button>
-    <span class="colorHex">${color}</span>`
+    `<span>${color}</span>
+    <button className="btnLockColor" onClick="lockColor(${index})">Bloquear color</button>
+    `
 }
-
-
-
-// Se llama a la función que crea a los divs hijos al iniciar la carga del documento
-createPallete ()
 
 
 // Funcionalidades extra: se puede bloquear un color elegido al hacer click sobre el mismo. Al hacerlo, al llamar a la función updatePallete se mantiene ese color elegido.
@@ -65,3 +61,8 @@ createPallete ()
 const lockColor = (index) => {
     palleteSize[index].valor ? palleteSize[index].valor= false : palleteSize[index].valor= true
 }
+
+
+// Se llama a la función que crea a los divs hijos al iniciar la carga del documento
+createPallete ()
+
