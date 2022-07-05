@@ -58,3 +58,10 @@
     background-color: black;
     color: white;
 }
+
+
+@media (min-width: 500px) {
+    #palleteContainer {
+        width: 50%;
+    } 
+}
